@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">QuranApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_sholat">Sholat</string>
+    <string name="title_doa">Doa</string>
+    <string name="title_penanda">Bookmark</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_search">Search</string>
+    <string name="cari">Cari...</string>
+
+    <string name="title_tab_1">Surah</string>
+    <string name="title_tab_2">Juz</string>
+    <string name="title_tab_3">Hadist</string>
+    <string name="jumlah_ayat">%1$s Ayat</string>
+    <string name="standar_icon_btn_desc">icon share</string>
+</resources>

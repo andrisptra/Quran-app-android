@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/icon_quran"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_sholat"
+        android:icon="@drawable/icon_sholat"
+        android:title="@string/title_sholat" />
+
+    <item
+        android:id="@+id/navigation_doa"
+        android:icon="@drawable/icon_doa"
+        android:title="@string/title_doa" />
+
+    <item
+        android:id="@+id/navigation_penanda"
+        android:icon="@drawable/icon_penanda"
+        android:title="@string/title_penanda" />
+
+</menu>
