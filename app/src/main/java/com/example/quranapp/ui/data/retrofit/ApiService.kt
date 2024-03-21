@@ -3,6 +3,7 @@ package com.example.quranapp.ui.data.retrofit
 import com.example.quranapp.ui.data.response.DetailJuzResponse
 import com.example.quranapp.ui.data.response.DetailSurahResponse
 import com.example.quranapp.ui.data.response.JuzResponse
+import com.example.quranapp.ui.data.response.SumberDoaResponse
 import com.example.quranapp.ui.data.response.SurahResponse
 import retrofit2.Call
 import retrofit2.http.GET
@@ -26,4 +27,8 @@ interface ApiService {
     fun getDetailJuz(
         @Path("nomorJuz") nomorJuz: String
     ): Call<DetailJuzResponse>
+
+    @GET("doa/sumber")
+    fun getSumberDoa(): Call<SumberDoaResponse>
+
 }
