@@ -29,6 +29,11 @@ class DetailJuzActivity : AppCompatActivity() {
         viewModel.listAyat.observe(this){
             setListAyat(it)
         }
+
+        binding.topAppBar.title = "Juz $juzId"
+        binding.topAppBar.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
         viewModel.getDetailJuz(juzId)
 
 
