@@ -2,7 +2,10 @@ package com.example.quranapp.ui.data.retrofit
 
 import com.example.quranapp.ui.data.response.DetailJuzResponse
 import com.example.quranapp.ui.data.response.DetailSurahResponse
+import com.example.quranapp.ui.data.response.DoaResponse
+import com.example.quranapp.ui.data.response.JadwalSholatResponse
 import com.example.quranapp.ui.data.response.JuzResponse
+import com.example.quranapp.ui.data.response.SemuaKotaResponse
 import com.example.quranapp.ui.data.response.SumberDoaResponse
 import com.example.quranapp.ui.data.response.SurahResponse
 import retrofit2.Call
@@ -30,5 +33,26 @@ interface ApiService {
 
     @GET("doa/sumber")
     fun getSumberDoa(): Call<SumberDoaResponse>
+
+    @GET("doa/sumber/{sumber}")
+    fun getListDoa(
+        @Path("sumber") sumber: String
+    ): Call<DoaResponse>
+
+    @GET("sholat/kota/semua")
+    fun getSemuaKota():Call<SemuaKotaResponse>
+
+    @GET("sholat/kota/cari/{cari}")
+    fun getCariKota(
+        @Path("cari") cari: String
+    ): Call<SemuaKotaResponse>
+
+    @GET("sholat/jadwal/{id}/{tahun}/{bulan}/{tanggal}")
+    fun getJadwalSholat(
+        @Path("id") id: String,
+        @Path("tahun") tahun: String,
+        @Path("bulan") bulan: String,
+        @Path("tanggal") tanggal: String,
+    ): Call<JadwalSholatResponse>
 
 }

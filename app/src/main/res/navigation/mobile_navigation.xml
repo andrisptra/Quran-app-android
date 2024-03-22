@@ -15,16 +15,34 @@
         android:id="@+id/navigation_sholat"
         android:name="com.example.quranapp.ui.view.SholatFragment"
         android:label="@string/title_sholat"
-        tools:layout="@layout/fragment_sholat" />
+        tools:layout="@layout/fragment_sholat" >
+        <action
+            android:id="@+id/action_navigation_sholat_to_sholatDetailFragment"
+            app:destination="@id/sholatDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_doa"
         android:name="com.example.quranapp.ui.view.DoaFragment"
         android:label="@string/title_doa"
-        tools:layout="@layout/fragment_doa" />
+        tools:layout="@layout/fragment_doa" >
+        <action
+            android:id="@+id/action_navigation_doa_to_detailSumberDoaFragment"
+            app:destination="@id/detailSumberDoaFragment" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_penanda"
         android:name="com.example.quranapp.ui.view.BookmarkFragment"
         android:label="@string/title_penanda"
         tools:layout="@layout/fragment_bookmark" />
+    <fragment
+        android:id="@+id/detailSumberDoaFragment"
+        android:name="com.example.quranapp.ui.view.DetailSumberDoaFragment"
+        android:label="fragment_detail_sumber_doa"
+        tools:layout="@layout/fragment_detail_sumber_doa" />
+    <fragment
+        android:id="@+id/sholatDetailFragment"
+        android:name="com.example.quranapp.ui.view.SholatDetailFragment"
+        android:label="fragment_sholat_detail"
+        tools:layout="@layout/fragment_sholat_detail" />
 </navigation>
