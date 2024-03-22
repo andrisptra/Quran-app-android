@@ -9,9 +9,15 @@ import com.example.quranapp.R
 
 class DoaAdapter(private val sumberDoa: List<String?>?) :
     RecyclerView.Adapter<DoaAdapter.ListViewHolder>() {
+    private lateinit var onItemClickCallback: OnItemClickCallback
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val sumber: TextView = itemView.findViewById(R.id.tv_sumber_doa)
     }
+
+    fun setOnItemClickCallback(onItemClickCallback:OnItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback
+    }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view: View =
@@ -26,6 +32,14 @@ class DoaAdapter(private val sumberDoa: List<String?>?) :
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val sumberDoa = sumberDoa?.get(position)
         holder.sumber.text = sumberDoa
+
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemClicked(sumberDoa.toString())
+        }
+    }
+
+    interface OnItemClickCallback{
+        fun onItemClicked(data: String)
     }
 
 }

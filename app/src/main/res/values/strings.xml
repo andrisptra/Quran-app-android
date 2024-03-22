@@ -14,4 +14,9 @@
     <string name="title_tab_3">Hadist</string>
     <string name="jumlah_ayat">%1$s Ayat</string>
     <string name="standar_icon_btn_desc">icon share</string>
+    <string name="subuh">Subuh</string>
+    <string name="ashar">Ashar</string>
+    <string name="dzuhur">dzuhur</string>
+    <string name="magrib">Magrib</string>
+    <string name="isya">Isya</string>
 </resources>
